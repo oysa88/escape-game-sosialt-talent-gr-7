@@ -21,14 +21,17 @@ radio.onReceivedString(function (receivedString) {
     }
     if (nivå == 5 && receivedString == "MASKINIST") {
         wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S5, 90)
+        radio.setGroup(gruppe)
     }
 })
 let radioNivå5 = 0
 let radioNivå4 = 0
 let radioNivå3 = 0
 let radioNivå2 = 0
+let gruppe = 0
 let nivå = 0
 nivå = 1
+gruppe = 7
 let radioNivå1 = 118
 radioNivå2 = 123
 radioNivå3 = 131
