@@ -1,3 +1,13 @@
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 47) {
+        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S1, 0)
+        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S2, 0)
+        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S3, 0)
+        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S4, 0)
+        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S5, 0)
+        radio.setGroup(radioNivå1)
+    }
+})
 radio.onReceivedString(function (receivedString) {
     if (nivå == 1 && receivedString == "TALENT") {
         wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S1, 90)
@@ -28,18 +38,14 @@ let radioNivå5 = 0
 let radioNivå4 = 0
 let radioNivå3 = 0
 let radioNivå2 = 0
+let radioNivå1 = 0
 let gruppe = 0
 let nivå = 0
 nivå = 1
 gruppe = 7
-let radioNivå1 = 118
+radio.setGroup(gruppe)
+radioNivå1 = 118
 radioNivå2 = 123
 radioNivå3 = 131
 radioNivå4 = 143
 radioNivå5 = 156
-radio.setGroup(radioNivå1)
-wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S1, 0)
-wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S2, 0)
-wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S3, 0)
-wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S4, 0)
-wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S5, 0)
